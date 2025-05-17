@@ -11,12 +11,6 @@ use Illuminate\Support\Facades\Auth;
 
 class RentalController extends Controller
 {
-//    public function __construct()
-//    {
-//        // Only logged-in customers may book or view their rentals
-//        $this->middleware('auth');
-//    }
-
     // Show current & past bookings
     public function index()
     {

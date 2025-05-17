@@ -1,4 +1,3 @@
-{{-- resources/views/frontend/rentals/index.blade.php --}}
 <x-app-layout title="My Bookings">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12">
         <h1 class="text-2xl font-bold mb-4">My Bookings</h1>

@@ -1,4 +1,3 @@
-{{-- resources/views/components/front-layout.blade.php --}}
 @props(['title' => null])
 
     <!DOCTYPE html>

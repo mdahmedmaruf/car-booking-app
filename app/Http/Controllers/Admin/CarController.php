@@ -8,12 +8,6 @@ use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
-    // Apply middleware in constructor if you wish
-//    public function __construct()
-//    {
-//        $this->middleware(['auth','admin']);
-//    }
-
     /**
      * Display a listing of the resource.
      */

@@ -1,4 +1,3 @@
-{{-- resources/views/components/dashboard-layout.blade.php --}}
 @props(['title' => null])
 
 <x-app-layout>

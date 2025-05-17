@@ -3,17 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Car;
 use App\Models\Rental;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 class RentalController extends Controller
 {
-//    public function __construct()
-//    {
-//        $this->middleware(['auth','admin']);
-//    }
-
     /**
      * Display a listing of the resource.
      */
@@ -28,7 +25,12 @@ class RentalController extends Controller
      */
     public function create()
     {
-        //
+        // Only customers listed
+        $customers = User::where('role', 'customer')->orderBy('name')->get();
+        // Only available cars
+        $cars      = Car::where('availability', true)->orderBy('name')->get();
+
+        return view('admin.rentals.create', compact('customers','cars'));
     }
 
     /**
@@ -36,7 +38,20 @@ class RentalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'user_id'    => 'required|exists:users,id',
+            'car_id'     => 'required|exists:cars,id',
+            'start_date' => 'required|date',
+            'end_date'   => 'required|date|after_or_equal:start_date',
+            'total_cost' => 'required|numeric',
+            'status'     => 'required|in:ongoing,completed,canceled',
+        ]);
+
+        Rental::create($data);
+
+        return redirect()
+            ->route('admin.rentals.index')
+            ->with('success', 'Rental created successfully.');
     }
 
     /**

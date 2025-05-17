@@ -1,4 +1,3 @@
-{{-- resources/views/frontend/cars/show.blade.php --}}
 <x-front-layout title="{{ $car->name }}">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         @if($car->image)
