@@ -38,7 +38,7 @@ Laravel is a modern PHP framework designed for building robust web applications 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/car-booking-app.git
+   git clone https://github.com/mdahmedmaruf/car-booking-app.git
    cd car-booking-app
    ```
 
