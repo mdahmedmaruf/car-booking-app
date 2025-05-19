@@ -4,6 +4,9 @@
 
 Laravel is a modern PHP framework designed for building robust web applications with elegant syntax. It offers features like MVC architecture, powerful routing, Eloquent ORM for database interactions, built-in authentication scaffolding, and an expressive, developer-friendly ecosystem.
 
+## Live Video
+Visit the Demo [live demo](https://www.awesomescreenshot.com/video/39990328?key=a84812a03264828a5bdcbc2c6e58429f)
+
 ## Features
 
 * **Admin Dashboard**
@@ -125,7 +128,7 @@ Laravel is a modern PHP framework designed for building robust web applications 
 
 * **Admin** (authenticated + admin)
 
-    * `/admin/dashboard`
+    * `/dashboard`
     * Resource routes under `/admin/cars`, `/admin/rentals`, `/admin/customers`
 
 ## Customization
@@ -134,17 +137,6 @@ Laravel is a modern PHP framework designed for building robust web applications 
 * Update email templates in `resources/views/emails`.
 * Adjust filters in `CarController@Frontend` for additional criteria.
 
-## Testing
-
-> *(Add testing instructions if you write tests)*
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/...`)
-3. Commit your changes (`git commit -m "..."`)
-4. Push to the branch (`git push origin feature/...`)
-5. Open a Pull Request
 
 ## License
 
